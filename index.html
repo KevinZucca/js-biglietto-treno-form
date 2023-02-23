@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="">
+        
             <form class="row g-3">
                 <div class="col-md-4">
                   <label for="validationDefault01" class="form-label">Nome e Cognome</label>
@@ -18,25 +18,20 @@
                 </div>
                 <div class="col-md-1">
                     <label for="validationDefault01" class="form-label">Km da percorrere</label>
-                    <input id="km" type="text" class="form-control" value="">
-                  </div>
+                    <input id="km" type="text" class="form-control" value="100">
+                </div>
                
-                <div class="col-md-3">
-                  <label for="validationDefault04" class="form-label">Fascia d'età</label>
-                  <select class="form-select">
-                    <option id="age" selected disabled value="">Scegli la fascia d'età</option>
-                    <option>Meno di 18 anni</option>
-                    <option>Tra i 18 e i 65 anni</option>
-                    <option>Over 65</option>
-                  </select>
+                <div class="col-md-1">
+                    <label for="validationDefault01" class="form-label">Età</label>
+                    <input id="age-user" type="text" class="form-control" value="20"> 
                 </div>
                 
                 <div class="col-12">
-                  <button id="generate" class="btn btn-primary" type="submit">Genera</button>
-                  <button id="cancel" class="btn btn-primary" type="submit">Annulla</button>
+                  <button id="generate" class="btn btn-primary" type="button">Genera</button>
+                  <button id="cancel" class="btn btn-primary" type="button">Annulla</button>
                 </div>
               </form>
-        </form>
+        
 
 
         <div class="container">
