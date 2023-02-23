@@ -14,37 +14,61 @@
 */
 
 
+let infoUser = document.getElementById("name");
+let kmUser = document.getElementById("km");
+let ageUser = document.getElementById("age");
+let generateButton = document.getElementById("generate");
+let cancelButton = document.getElementById("cancel");
+let passengerName = document.getElementById("passenger-name");
+let passengerKm = document.getElementById("passenger-km");
+let passengerAge = document.getElementById("passenger-age");
+let passengerTicketPrice = document.getElementById("passenger-ticket-price");
 
 
 
 
 
-let infoUser = prompt("Nome e cognome");
-let kmUser = parseInt(prompt("Km da percorrere"));
-let ageUser = parseInt(prompt("Età"));
 
-let ticketPrice = kmUser * 0.21;
-let finalPrice;
-
-
-if (ageUser < 18) {
-    finalPrice = ticketPrice - ticketPrice / 100 * 20; 
-}   else if (ageUser >= 65) {
-    finalPrice = ticketPrice - ticketPrice / 100 * 40;
-} else { 
-    finalPrice = ticketPrice;
-}
-
-finalPrice = finalPrice.toFixed(2);
-document.writeln("Il prezzo del biglietto è: " + finalPrice + "€");
+generateButton.addEventListener("click", function() {
+ passengerName.innerHTML = infoUser.value;
+ passengerKm.innerHTML = kmUser.value;
+});
 
 
 
 
 
-document.writeln("Nome e cognome: " + infoUser);
-document.writeln("Km da percorrere: " + kmUser + "km" );
-document.writeln("Età: " + ageUser + "anni");
+
+
+
+
+
+
+
+// let infoUser = prompt("Nome e cognome");
+// let kmUser = parseInt(prompt("Km da percorrere"));
+// let ageUser = parseInt(prompt("Età"));
+
+// let ticketPrice = kmUser * 0.21;
+// let finalPrice;
+
+
+// if (ageUser < 18) {
+//     finalPrice = ticketPrice - ticketPrice / 100 * 20; 
+// }   else if (ageUser >= 65) {
+//     finalPrice = ticketPrice - ticketPrice / 100 * 40;
+// } else { 
+//     finalPrice = ticketPrice;
+// }
+
+// finalPrice = finalPrice.toFixed(2);
+
+
+
+
+
+
+
 
 
 
