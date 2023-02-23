@@ -1,0 +1,15 @@
+#main-container {
+    background-color: #f8d974;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px;
+    margin-top: 200px;
+}
+
+
+#passenger-table-data {
+    height: 80px;
+}
+
+#t-head {
+    background-color: #bab6b6;
+}

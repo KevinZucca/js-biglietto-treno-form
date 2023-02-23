@@ -27,16 +27,12 @@ let passengerTicketPrice = document.getElementById("passenger-ticket-price");
 
 
 
-let ticketPrice = kmUser.value * 0.21;
-let finalPrice;
-
-
-
 // EVENTI PER GENERARE I DATI SUL BIGLIETTO CON I BOTTONI
 generateButton.addEventListener("click", function() {
 
+ let ticketPrice = kmUser.value * 0.21;
+ let finalPrice;
   
-
  passengerName.innerHTML = infoUser.value;
  passengerKm.innerHTML = kmUser.value;
  passengerAge.innerHTML = ageUser.value;
@@ -45,13 +41,25 @@ generateButton.addEventListener("click", function() {
    finalPrice = ticketPrice - ticketPrice / 100 * 20; 
    finalPrice = finalPrice.toFixed(2);
    passengerTicketPrice.innerHTML = finalPrice;
+ } else if (ageUser.value >= 65) {
+  finalPrice = ticketPrice - ticketPrice / 100 * 40; 
+   finalPrice = finalPrice.toFixed(2);
+   passengerTicketPrice.innerHTML = finalPrice;
+ } else {
+  finalPrice = ticketPrice;
+  finalPrice = finalPrice.toFixed(2);
+  passengerTicketPrice.innerHTML = finalPrice;
  }
 });
 
 cancelButton.addEventListener("click", function() {
+ infoUser.value = "";
+ kmUser.value = "";
+ ageUser.value = "";
  passengerName.innerHTML = "";
  passengerKm.innerHTML = "";
  passengerAge.innerHTML = "";
+ passengerTicketPrice.innerHTML = "";
 });
 
 
